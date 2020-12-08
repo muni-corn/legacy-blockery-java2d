@@ -1,4 +1,4 @@
-package irixstudios.blockery;
+package musicaflight.blockery;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

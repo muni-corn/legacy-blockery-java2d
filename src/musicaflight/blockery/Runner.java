@@ -3,7 +3,7 @@
  * Board dimensions: 14 rows, 10 columns!
  */
 
-package irixstudios.blockery;
+package musicaflight.blockery;
 
 import java.awt.Color;
 import java.awt.Cursor;

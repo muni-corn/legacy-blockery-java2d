@@ -1,46 +1,44 @@
-package irixstudios.blockery;
+package musicaflight.blockery;
 
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.FontMetrics;
 import java.awt.Graphics2D;
 
-public class WipeHighs {
+public class WipeEnvSave {
 
 	private Runner runner;
 	boolean wipingSaveAudio = false;
 	boolean needToCheckAudio = true;
-
+	
 	int yesNoHighlight = 2;
 
-	public WipeHighs(Runner runner) {
+	public WipeEnvSave(Runner runner) {
 		this.runner = runner;
 	}
 
 	public void reallyWipeSave(int xx, int yy) {
 		if (xx > 448 && xx < 513 && yy > 350 && yy < 380) {
 			runner.playingEnd = false;
-			runner.playingOpt = true;
+			runner.playingOpt = false;
 			runner.playingEnv = false;
 			runner.wipingEnvSave = false;
 			runner.wipingEndSave = false;
-			runner.wipingHighs = false;
-			runner.onMenu = false;
+			runner.onMenu = true;
 			if (runner.soundOn) {
 				Audio.CLICK.play();
 			}
 			if (runner.musicOn) {
-				Audio.OPTIONS.loop();
+				Audio.MENU.loop();
 			}
 		}
 		if (xx > 448 && xx < 513 && yy > 390 && yy < 420) {
-			runner.hsfr.resetScoreFiles();
+			runner.envfr.resetFiles();
 			runner.playingEnd = false;
 			runner.playingOpt = false;
 			runner.playingEnv = false;
 			runner.wipingEnvSave = false;
 			runner.wipingEndSave = false;
-			runner.wipingHighs = false;
 			runner.onMenu = true;
 			if (runner.soundOn) {
 				Audio.OHWELL.play();
@@ -58,8 +56,8 @@ public class WipeHighs {
 		g.setColor(new Color(187, 187, 187));
 		g.setFont(Fonts.NEWCICLESEMI.deriveFont(Font.BOLD, 15f));
 		FontMetrics FM = g.getFontMetrics();
-		int FMSW = FM.stringWidth("REALLY RESET HIGH SCORES?");
-		g.drawString("REALLY RESET HIGH SCORES?", (966 / 2) - (FMSW / 2), 230);
+		int FMSW = FM.stringWidth("REALLY TRASH ENVIRONMENT PROGRESS?");
+		g.drawString("REALLY TRASH ENVIRONMENT PROGRESS?", (966 / 2) - (FMSW / 2), 230);
 		FMSW = FM.stringWidth("This can't be undone!");
 		g.drawString("This can't be undone!", (966 / 2) - (FMSW / 2), 270);
 
@@ -74,7 +72,7 @@ public class WipeHighs {
 		g.drawString("Sure", (966 / 2) - (FMSW / 2), 411);
 
 		g.setColor(new Color(255, 255, 255, 50));
-		
+
 		switch (yesNoHighlight) {
 		case 0:
 			g.fillRect((966 / 2) - 35, 350, 70, 30);

@@ -1,4 +1,4 @@
-package irixstudios.blockery;
+package musicaflight.blockery;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -33,7 +33,7 @@ public class ReleaseLog {
 	String line17 = "";
 	String line18 = "";
 
-	String copyrightState = "Copyright 2013, IrixStudios";
+	String copyrightState = "Copyright 2013, Harrison Thorne";
 
 	public ReleaseLog(Runner runner) {
 		this.runner = runner;

@@ -1,11 +1,11 @@
-package irixstudios.blockery;
+package musicaflight.blockery;
 
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.FontMetrics;
 import java.awt.Graphics2D;
 
-public class WipeEnvSave {
+public class WipeEndSave {
 
 	private Runner runner;
 	boolean wipingSaveAudio = false;
@@ -13,7 +13,7 @@ public class WipeEnvSave {
 	
 	int yesNoHighlight = 2;
 
-	public WipeEnvSave(Runner runner) {
+	public WipeEndSave(Runner runner) {
 		this.runner = runner;
 	}
 
@@ -33,7 +33,7 @@ public class WipeEnvSave {
 			}
 		}
 		if (xx > 448 && xx < 513 && yy > 390 && yy < 420) {
-			runner.envfr.resetFiles();
+			runner.endfr.resetFiles();
 			runner.playingEnd = false;
 			runner.playingOpt = false;
 			runner.playingEnv = false;
@@ -56,8 +56,8 @@ public class WipeEnvSave {
 		g.setColor(new Color(187, 187, 187));
 		g.setFont(Fonts.NEWCICLESEMI.deriveFont(Font.BOLD, 15f));
 		FontMetrics FM = g.getFontMetrics();
-		int FMSW = FM.stringWidth("REALLY TRASH ENVIRONMENT PROGRESS?");
-		g.drawString("REALLY TRASH ENVIRONMENT PROGRESS?", (966 / 2) - (FMSW / 2), 230);
+		int FMSW = FM.stringWidth("REALLY TRASH ENDLESS PROGRESS?");
+		g.drawString("REALLY TRASH ENDLESS PROGRESS?", (966 / 2) - (FMSW / 2), 230);
 		FMSW = FM.stringWidth("This can't be undone!");
 		g.drawString("This can't be undone!", (966 / 2) - (FMSW / 2), 270);
 
@@ -70,9 +70,9 @@ public class WipeEnvSave {
 		g.drawString("No", (966 / 2) - (FMSW / 2), 371);
 		FMSW = FM.stringWidth("Sure");
 		g.drawString("Sure", (966 / 2) - (FMSW / 2), 411);
-
+		
 		g.setColor(new Color(255, 255, 255, 50));
-
+		
 		switch (yesNoHighlight) {
 		case 0:
 			g.fillRect((966 / 2) - 35, 350, 70, 30);

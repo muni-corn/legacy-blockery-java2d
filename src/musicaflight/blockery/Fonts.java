@@ -1,4 +1,4 @@
-package irixstudios.blockery;
+package musicaflight.blockery;
 
 import java.awt.Font;
 import java.awt.FontFormatException;

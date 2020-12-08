@@ -1,4 +1,4 @@
-package irixstudios.blockery;
+package musicaflight.blockery;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -27,8 +27,8 @@ public class Title {
 		g.setColor(new Color(187, 187, 187));
 		g.setFont(Fonts.PIRULEN.deriveFont(Font.PLAIN, 50f));
 		FM = g.getFontMetrics();
-		FMSW = FM.stringWidth("IrixStudios");
-		g.drawString("IrixStudios", (966 / 2) - (FMSW / 2), (568 / 2));
+		FMSW = FM.stringWidth("Harrison Thorne");
+		g.drawString("Harrison Thorne", (966 / 2) - (FMSW / 2), (568 / 2));
 		if (initialize) {
 			alpha += advanceIncre;
 			if (alpha >= 255) {
